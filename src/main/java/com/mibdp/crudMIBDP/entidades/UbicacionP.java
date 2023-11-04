@@ -1,9 +1,13 @@
-package com.mibdp.crudMIBDP.ubicacion;
+package com.mibdp.crudMIBDP.entidades;
 
 public class UbicacionP {
     private Integer vId;
     private String ciudad;
     private String lugar;
+
+    public UbicacionP() {
+
+    }
 
     public Integer getVId() {
         return vId;

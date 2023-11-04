@@ -6,6 +6,8 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import com.mibdp.crudMIBDP.entidades.Rating;
+
 @Repository
 public class RatingDAOImpl implements RatingDAO {
 

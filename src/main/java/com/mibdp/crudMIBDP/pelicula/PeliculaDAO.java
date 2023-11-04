@@ -2,6 +2,8 @@ package com.mibdp.crudMIBDP.pelicula;
 
 import java.util.List;
 
+import com.mibdp.crudMIBDP.entidades.Pelicula;
+
 public interface PeliculaDAO {
 
     int save(Pelicula peli);

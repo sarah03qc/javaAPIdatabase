@@ -1,6 +1,7 @@
 package com.mibdp.crudMIBDP.pelicula;
 
 import java.util.List;
+import com.mibdp.crudMIBDP.entidades.Pelicula;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

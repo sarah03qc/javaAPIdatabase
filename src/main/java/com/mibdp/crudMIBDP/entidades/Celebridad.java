@@ -1,8 +1,12 @@
-package com.mibdp.crudMIBDP.celebridad;
+package com.mibdp.crudMIBDP.entidades;
 
 public class Celebridad {
     private Long celebID;
     private String nombre;
+
+    public Celebridad() {
+
+    }
 
     public Long getCelebID() {
         return celebID;
