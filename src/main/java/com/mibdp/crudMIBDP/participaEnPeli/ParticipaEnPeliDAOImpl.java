@@ -6,8 +6,6 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import com.mibdp.crudMIBDP.entidades.ParticipaEnPeli;
-
 @Repository
 public class ParticipaEnPeliDAOImpl implements ParticipaEnPeliDAO {
 
@@ -21,9 +19,9 @@ public class ParticipaEnPeliDAOImpl implements ParticipaEnPeliDAO {
     }
 
     @Override
-    public ParticipaEnPeli getById(Long id) {
-        return jdbcTemplate5.queryForObject("SELECT * FROM participaEnPeli WHERE peli_id=?",
-                new BeanPropertyRowMapper<ParticipaEnPeli>(ParticipaEnPeli.class), id);
+    public ParticipaEnPeli getById(Long celebID) {
+        return jdbcTemplate5.queryForObject("SELECT * FROM participaEnPeli WHERE celebID=?",
+                new BeanPropertyRowMapper<ParticipaEnPeli>(ParticipaEnPeli.class), celebID);
     }
 
 }

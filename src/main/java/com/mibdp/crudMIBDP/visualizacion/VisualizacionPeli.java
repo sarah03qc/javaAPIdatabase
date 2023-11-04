@@ -1,14 +1,10 @@
-package com.mibdp.crudMIBDP.entidades;
+package com.mibdp.crudMIBDP.visualizacion;
 
 public class VisualizacionPeli {
     private Long vId;
     private Long peli_id;
     private String vistoCuando;
     private Integer tiempoVisto;
-
-    public VisualizacionPeli() {
-
-    }
 
     public Long getVId() {
         return vId;

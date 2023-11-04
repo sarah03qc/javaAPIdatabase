@@ -1,4 +1,4 @@
-package com.mibdp.crudMIBDP.entidades;
+package com.mibdp.crudMIBDP.rating;
 
 public class Rating {
     private Float calificacion;

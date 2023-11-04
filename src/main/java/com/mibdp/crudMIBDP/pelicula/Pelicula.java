@@ -1,4 +1,4 @@
-package com.mibdp.crudMIBDP.entidades;
+package com.mibdp.crudMIBDP.pelicula;
 
 public class Pelicula {
     private Long id;

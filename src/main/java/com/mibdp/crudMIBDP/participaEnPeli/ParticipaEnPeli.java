@@ -1,13 +1,9 @@
-package com.mibdp.crudMIBDP.entidades;
+package com.mibdp.crudMIBDP.participaEnPeli;
 
 public class ParticipaEnPeli {
     private Long celebID;
     private String rol;
-    private Long peli_id;
-
-    public ParticipaEnPeli() {
-
-    }
+    private String peli_id;
 
     public Long getCelebID() {
         return celebID;
@@ -25,11 +21,11 @@ public class ParticipaEnPeli {
         this.rol = rol;
     }
 
-    public Long getPeli_id() {
+    public String getPeli_id() {
         return peli_id;
     }
 
-    public void setPeli_id(Long peli_id) {
+    public void setPeli_id(String peli_id) {
         this.peli_id = peli_id;
     }
 
