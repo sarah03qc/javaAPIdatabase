@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de Películas</title>
+</head>
+<body>
+    <h2>Guardar Pelicula</h2>
+    <form id="peliculaForm">
+        <label for="titulo">Titulo:</label>
+        <input type="text" id="titulo" name="titulo" required><br><br>
+
+        <label for="sinopsis">Sinopsis:</label>
+        <textarea id="sinopsis" name="sinopsis" required></textarea><br><br>
+
+        <label for="enListaPorVer">En Lista por Ver:</label>
+        <input type="checkbox" id="enListaPorVer" name="enListaPorVer"><br><br>
+
+        <button type="button" onclick="guardarPelicula()">Guardar</button>
+    </form>
+    <script>
+        function guardarPelicula() {
+            var titulo = document.getElementById("titulo").value;
+            var sinopsis = document.getElementById("sinopsis").value;
+            var enListaPorVer = document.getElementById("enListaPorVer").checked;
+
+            var pelicula = {
+                "titulo": titulo,
+                "sinopsis": sinopsis,
+                "enListaPorVer": enListaPorVer
+            };
+
+            fetch('/peliculas', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(pelicula)
+            })
+            .then(response => response.text())
+            .then(data => {
+                alert(data);
+            });
+        }
+    </script>
+</body>
+</html>
