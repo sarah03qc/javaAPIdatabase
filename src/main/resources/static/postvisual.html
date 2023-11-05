@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Visualizacion de Pelicula</title>
+</head>
+<body>
+    <h2>Guardar Visualizacion</h2>
+    <form id="visualizacionForm">
+        <label for="peli_id">ID de la Pelicula:</label>
+        <input type="text" id="peli_id" name="peli_id" required><br><br>
+
+        <label for="vistoCuando">Visto Cuando:</label>
+        <input type="text" id="vistoCuando" name="vistoCuando" required><br><br>
+
+        <label for="tiempoVisto">Tiempo Visto (minutos):</label>
+        <input type="text" id="tiempoVisto" name="tiempoVisto" required><br><br>
+
+        <button type="button" onclick="guardarVisualizacion()">Guardar</button>
+    </form>
+    <script>
+        function guardarVisualizacion() {
+            var peli_id = document.getElementById("peli_id").value;
+            var vistoCuando = document.getElementById("vistoCuando").value;
+            var tiempoVisto = document.getElementById("tiempoVisto").value;
+
+            var visualizacionPeli = {
+                "peli_id": peli_id,
+                "vistoCuando": vistoCuando,
+                "tiempoVisto": tiempoVisto
+            };
+
+            fetch('/visualizacion', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(visualizacionPeli)
+            })
+            .then(response => response.text())
+            .then(data => {
+                alert(data);
+            });
+        }
+    </script>
+</body>
+</html>

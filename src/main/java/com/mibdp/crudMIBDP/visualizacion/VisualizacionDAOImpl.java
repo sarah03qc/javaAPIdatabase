@@ -13,6 +13,13 @@ public class VisualizacionDAOImpl implements VisualizacionDAO {
     JdbcTemplate jdbcTemplate2;
 
     @Override
+    public int save(VisualizacionPeli visualizacionPeli) {
+        return jdbcTemplate2.update("INSERT INTO visualizacionPeli(peli_id, vistoCuando, tiempoVisto) VALUES(?, ?, ?)",
+                new Object[] { visualizacionPeli.getPeli_id(), visualizacionPeli.getVistoCuando(),
+                        visualizacionPeli.getTiempoVisto() });
+    }
+
+    @Override
     public List<VisualizacionPeli> getAll() {
         return jdbcTemplate2.query("SELECT * FROM visualizacionPeli",
                 new BeanPropertyRowMapper<VisualizacionPeli>(VisualizacionPeli.class));

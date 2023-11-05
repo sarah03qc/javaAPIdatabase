@@ -22,4 +22,5 @@ public class UbicacionPController {
     public UbicacionP getUbicacionById(@PathVariable Long vId) {
         return uDAO.getById(vId);
     }
+
 }

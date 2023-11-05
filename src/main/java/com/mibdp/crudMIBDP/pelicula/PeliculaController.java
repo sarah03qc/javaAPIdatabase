@@ -15,17 +15,17 @@ public class PeliculaController {
     @Autowired
     private PeliculaDAO pDAO;
 
-    @GetMapping("/peliculas")
+    @GetMapping("/pelicula")
     public List<Pelicula> getPeliculas() {
         return pDAO.getAll();
     }
 
-    @GetMapping("/peliculas/{id}")
+    @GetMapping("/pelicula/{id}")
     public Pelicula getPeliculaById(@PathVariable Long id) {
         return pDAO.getById(id);
     }
 
-    @PostMapping("/peliculas")
+    @PostMapping("/pelicula")
     public String savePelicula(@RequestBody Pelicula pelicula) {
         return pDAO.save(pelicula) + " Numero de filas guardadas a la base de datos";
     }

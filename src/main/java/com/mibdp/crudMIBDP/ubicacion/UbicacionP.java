@@ -1,15 +1,15 @@
 package com.mibdp.crudMIBDP.ubicacion;
 
 public class UbicacionP {
-    private Integer vId;
+    private Long vId;
     private String ciudad;
     private String lugar;
 
-    public Integer getVId() {
+    public Long getVId() {
         return vId;
     }
 
-    public void setVId(Integer vId) {
+    public void setVId(Long vId) {
         this.vId = vId;
     }
 
